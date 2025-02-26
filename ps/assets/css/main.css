@@ -126,14 +126,14 @@ ul {
 }
 
 .secondary-btn {
-  background: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
+  background: var(--gradient-primary); /* 改成与 primary-btn 相同的背景 */
+  color: white; /* 保持文字颜色与 primary-btn 一致 */
+  border: 2px solid var(--primary-color); /* 保留边框，保持与原设计的一致性 */
 }
 
 .secondary-btn:hover {
-  background: var(--gradient-primary);
-  color: white;
+  background: var(--gradient-primary); /* 悬停时保持与默认状态一致 */
+  color: white; /* 悬停时保持文字颜色 */
 }
 
 /* 导航栏 */
