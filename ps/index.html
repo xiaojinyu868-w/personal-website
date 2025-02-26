@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李浩 - 个人主页</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="李浩的个人主页 - 统计学、机器学习与大语言模型专家，探索AI创新应用">
+    <meta name="keywords" content="李浩, 统计学, 人工智能, 大语言模型, 机器学习, 深度学习, 北京师范大学">
+    <meta name="author" content="李浩">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_xxxx.css">
+    <meta property="og:title" content="李浩 - 统计学与人工智能专家">
+    <meta property="og:description" content="统计学、机器学习与大语言模型专家，探索AI创新应用">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <style>
+      .about-section {
+        background: linear-gradient(135deg, #f0f4ff 0%, #d6e4ff 100%) !important;
+        box-shadow: inset 0 0 20px rgba(66, 135, 245, 0.1) !important;
+      }
+      
+      @keyframes morphing {
+        0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+        50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+        75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+        100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+      }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">李浩</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="active"><a href="index.html">首页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#education">教育经历</a></li>
+                <li><a href="#experience">项目经验</a></li>
+                <li><a href="#skills">技能证书</a></li>
+                <li><a href="pages/projects.html">作品展示</a></li>
+                <li><a href="pages/research.html">研究兴趣</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 头部区域 -->
+    <header class="hero" id="home">
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="hero-content centered">
+                <div class="hero-text">
+                    <h1 class="glitch-effect" data-text="李浩">李浩</h1>
+                    <div class="typing-container">
+                        <h2 class="typing-text">统计学 · 人工智能 · 大语言模型</h2>
+                    </div>
+                    <p>技术理想主义者，热衷于大模型与人工智能技术</p>
+                    <div class="hero-buttons">
+                        <a href="#about" class="btn primary-btn">了解更多</a>
+                        <a href="#contact" class="btn secondary-btn">联系我</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 关于我 - 简化测试 -->
+    <!-- <section id="about-test" style="
+      background: yellow; 
+      padding: 50px; 
+      margin: 50px 0; 
+      display: block !important;
+      position: relative !important;
+      z-index: 9999 !important;
+    ">
+      <h2 style="color: red; font-size: 30px; text-align: center;">测试 - 关于我</h2>
+      <p style="color: black; font-size: 20px; text-align: center;">如果你能看到这段文字，说明基本显示功能正常</p>
+    </section> -->
+
+    <!-- 添加正式的"关于我"部分 -->
+    <section id="about" class="about-section">
+        <div class="about-bg"></div>
+        <div class="container">
+            <div class="section-title">
+                <h2>关于我</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="about-container">
+                <div class="about-profile">
+                    <div class="profile-image">
+                        <div class="image-wrapper">
+                            <img src="assets/images/profile.jpg" alt="李浩" />
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h3>李浩</h3>
+                        <p class="profile-title">统计学 & 人工智能</p>
+                        <p class="profile-description">我是一个"技术理想主义者"，有着投身技术浪潮的热情，希望通过技术推动社会进步，打磨优秀的产品以实现人生价值。我对大模型(LLM)的后训练、强化学习、基于LLM的多智能体系统，以及AI在教育与社会科学领域的应用等方向尤其感兴趣。</p>
+                        <div class="profile-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>1181783314@qq.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>131-2351-1781</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>北京</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-cards">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>教育背景</h4>
+                        <p>北京师范大学 | 统计学学士 | 2021.09 – 2024.06</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>技术专长</h4>
+                        <p>统计学、机器学习、深度学习、大语言模型、自然语言处理</p>
+                        <div class="card-tags">
+                            <span>Python</span>
+                            <span>LLM</span>
+                            <span>NLP</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>研究兴趣</h4>
+                        <p>大模型后训练、强化学习、多智能体系统、AI在教育与社会科学领域的应用</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 教育经历 -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>教育经历</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>北京师范大学</h3>
+                        <h4>统计学学士 | 2021.09 – 2024.06（在读）</h4>
+                        <ul>
+                            <li>核心课程：抽样技术与市场调查（93分），统计预测与决策（92分），深度学习（93分），线性模型（92分）</li>
+                            <li>所获荣誉：京师二等奖学金、竞赛一等奖学金、"京师杯"课外学术科技作品竞赛一等奖</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目经验 -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>实习与项目经历</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>中国移动，北京</h3>
+                        <h4>数据方向实习生 | 2023.12 – 2024.03</h4>
+                        <h5>大语言模型应用：</h5>
+                        <ul>
+                            <li>探索大语言模型（LLM）在数据治理中的应用</li>
+                            <li>针对数据采集过程中的质量控制提出创新解决方案</li>
+                            <li>设计并实现了一个基于agent框架的demo，利用LLM优化数据治理逻辑</li>
+                        </ul>
+                        <p><strong>实习成果：</strong>在实习考核中被评为"优秀实习生"，获得了校招绿通免试资格</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>正大杯市场调查与分析大赛</h3>
+                        <h4>团队队长 | 2023.12 – 2024.04</h4>
+                        <h5>国家级三等奖 / 北京市一等奖</h5>
+                        <ul>
+                            <li>领导团队研究AIGC赋能文旅产业，设计1000+用户问卷洞察Z世代需求，构建技术认知、体验、隐私安全等五大指标体系</li>
+                            <li>用PEST与扎根理论设计调研框架，结合SEM验证用户感知、情感分析绘制词云图、XGBoost预测行为（准确率86.23%）</li>
+                            <li>提出新兴景点增强科技感、传统景点强化文化与隐私的差异化策略，挖掘AIGC全周期潜力提升行业价值</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>全国大学生统计建模大赛</h3>
+                        <h4>团队队长 | 2024.02 – 2024.05</h4>
+                        <h5>北京市二等奖</h5>
+                        <h5>创新性文本检测：</h5>
+                        <ul>
+                            <li>提出了结合标题信息与文本嵌入技术的创新性文本检测方法</li>
+                            <li>成功向量化文本表示</li>
+                            <li>借鉴transform模型结构高效完成文本分类任务</li>
+                            <li>显著提升了模型的分类准确率</li>
+                        </ul>
+                        <p><strong>开源贡献：</strong>通过调用API生成并开源了1GB的高质量问答对数据集，填补了相关领域的数据集空白并开源</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能证书 -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>技能与证书</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>编程技能</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Git版本管理</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">LaTeX文章写作</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>机器学习</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">常见回归与分类算法</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">树模型与集成学习</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SVM</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>深度学习</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">RNN</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Transformer</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 82%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">强化学习(PPO, DPO)</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 78%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>大模型</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">SFT, RLHF</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">前沿架构(DeepSeek R1, CoT)</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>证书</h3>
+                    <ul class="certificate-list">
+                        <li><i class="fas fa-certificate"></i> 英语CET-6</li>
+                        <li><i class="fas fa-certificate"></i> 教师资格证</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>联系我</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>邮箱</h3>
+                    <p><a href="mailto:1181783314@qq.com">1181783314@qq.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>电话</h3>
+                    <p>131-2351-1781</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm" action="https://formspree.io/f/你的formspree代码" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="您的姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="您的邮箱" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="您的留言" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">发送消息</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2024 李浩. 保留所有权利.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- 侧边联系方式面板 -->
+    <div class="side-contact">
+        <div class="contact-toggle">
+            <i class="fas fa-envelope"></i>
+        </div>
+        <div class="contact-panel">
+            <div class="contact-header">
+                <h3>联系我</h3>
+                <span class="close-contact"><i class="fas fa-times"></i></span>
+            </div>
+            <div class="contact-body">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:1181783314@qq.com">1181783314@qq.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>131-2351-1781</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>北京</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // 先显示所有AOS元素，防止它们保持隐藏状态
+        document.querySelectorAll('[data-aos]').forEach(element => {
+          element.removeAttribute('data-aos');
+        });
+        
+        // 然后正常初始化AOS
+        AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true,
+          mirror: false
+        });
+      });
+    </script>
+    <script>
+      // 调试"关于我"部分
+      window.addEventListener('load', function() {
+        const aboutSection = document.getElementById('about');
+        if(aboutSection) {
+          console.log('关于我部分存在，检查可见性状态:');
+          const style = window.getComputedStyle(aboutSection);
+          console.log('Display:', style.display);
+          console.log('Opacity:', style.opacity);
+          console.log('Visibility:', style.visibility);
+          console.log('位置信息:', aboutSection.getBoundingClientRect());
+          
+          // 强制显示
+          aboutSection.style.cssText = `
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            position: relative !important;
+            z-index: 999 !important;
+            background-color: #f8faff !important;
+          `;
+          
+          // 寻找所有子元素并强制显示
+          aboutSection.querySelectorAll('.about-card').forEach((card, index) => {
+            card.style.cssText = `
+              display: flex !important;
+              visibility: visible !important;
+              opacity: 1 !important;
+              position: relative !important;
+              z-index: ${1000 + index} !important;
+              background-color: white !important;
+              margin: 10px !important;
+              padding: 20px !important;
+              border: 2px solid #4287f5 !important;
+            `;
+          });
+        } else {
+          console.error('找不到关于我部分!');
+        }
+      });
+    </script>
+</body>
+</html> 

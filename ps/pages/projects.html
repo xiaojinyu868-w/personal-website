@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品展示 - 李浩个人主页</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .project-image {
+            height: 200px;
+            background-color: #f0f0f0;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .project-content {
+            padding: 20px;
+        }
+        
+        .project-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .project-content p {
+            margin-bottom: 15px;
+            color: var(--light-text);
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .project-tag {
+            background-color: #e9f5ff;
+            color: var(--primary-color);
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .project-links a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .project-links i {
+            font-size: 1.1rem;
+        }
+        
+        .page-header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 100px 0 50px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .projects-section {
+            padding: 50px 0 100px;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .filter-btn {
+            background-color: white;
+            border: 1px solid var(--border-color);
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">李浩</div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../index.html#about">关于我</a></li>
+                <li><a href="../index.html#education">教育经历</a></li>
+                <li><a href="../index.html#experience">项目经验</a></li>
+                <li><a href="../index.html#skills">技能证书</a></li>
+                <li class="active"><a href="projects.html">作品展示</a></li>
+                <li><a href="research.html">研究兴趣</a></li>
+                <li><a href="../index.html#contact">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="page-header">
+        <div class="container">
+            <h1>作品展示</h1>
+            <p>我的项目作品与技术实践</p>
+        </div>
+    </header>
+
+    <!-- 项目展示内容 -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="ai">人工智能</button>
+                <button class="filter-btn" data-filter="data">数据分析</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- 项目1 -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-image" style="background-image: url('https://via.placeholder.com/350x200/4287f5/ffffff?text=LLM+Agent')"></div>
+                    <div class="project-content">
+                        <h3>多智能体数据治理助手</h3>
+                        <p>利用大语言模型构建的数据治理智能助手，能够自动识别数据质量问题并提供解决方案。</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Dify</span>
+                            <span class="project-tag">LLM</span>
+                            <span class="project-tag">数据治理</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> 查看代码</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> 演示</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 项目2 -->
+                <div class="project-card" data-category="data">
+                    <div class="project-image" style="background-image: url('https://via.placeholder.com/350x200/2a2a72/ffffff?text=数据分析')"></div>
+                    <div class="project-content">
+                        <h3>AIGC文旅产业用户需求分析</h3>
+                        <p>基于1000+用户问卷的数据分析，探索Z世代对AIGC在文旅产业中应用的需求与态度。</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">XGBoost</span>
+                            <span class="project-tag">SEM</span>
+                            <span class="project-tag">情感分析</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-file-alt"></i> 研究报告</a>
+                            <a href="#"><i class="fas fa-chart-bar"></i> 数据可视化</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 项目3 -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-image" style="background-image: url('https://via.placeholder.com/350x200/00b0ff/ffffff?text=文本检测')"></div>
+                    <div class="project-content">
+                        <h3>创新性文本检测系统</h3>
+                        <p>结合标题信息与文本嵌入技术的创新性文本检测方法，显著提升了分类准确率。</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Transformer</span>
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">文本分类</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> 查看代码</a>
+                            <a href="#"><i class="fas fa-database"></i> 数据集</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2024 李浩. 保留所有权利.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-weixin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // 项目筛选功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 更新活动按钮
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 获取筛选类别
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // 筛选项目
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

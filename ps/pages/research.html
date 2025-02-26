@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究兴趣 - 李浩个人主页</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <style>
+        .research-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
+        }
+        
+        .research-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .research-item p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .tag {
+            background-color: #e9f5ff;
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">李浩</div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../index.html#about">关于我</a></li>
+                <li><a href="../index.html#education">教育经历</a></li>
+                <li><a href="../index.html#experience">项目经验</a></li>
+                <li><a href="../index.html#skills">技能证书</a></li>
+                <li><a href="projects.html">作品展示</a></li>
+                <li class="active"><a href="research.html">研究兴趣</a></li>
+                <li><a href="../index.html#contact">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="page-header">
+        <div class="container">
+            <h1>研究兴趣</h1>
+            <p>我对人工智能和大语言模型领域的研究方向</p>
+        </div>
+    </header>
+
+    <!-- 研究兴趣内容 -->
+    <section class="research-section">
+        <div class="container">
+            <div class="research-item">
+                <h3>大模型(LLM)的后训练与微调</h3>
+                <p>探索大语言模型在特定领域的适应性训练方法，包括SFT（监督微调）和RLHF（基于人类反馈的强化学习）等技术。研究如何通过有限的计算资源和数据集，高效地提升模型在特定任务上的表现。</p>
+                <p>当前关注点：</p>
+                <ul>
+                    <li>低资源环境下的高效微调策略</li>
+                    <li>领域特定知识的注入方法</li>
+                    <li>模型能力边界的探索与突破</li>
+                </ul>
+                <div class="research-tags">
+                    <span class="tag">SFT</span>
+                    <span class="tag">RLHF</span>
+                    <span class="tag">LoRA</span>
+                    <span class="tag">QLoRA</span>
+                    <span class="tag">领域适应</span>
+                </div>
+            </div>
+
+            <div class="research-item">
+                <h3>强化学习在大模型训练中的应用</h3>
+                <p>研究如何将强化学习技术应用于大语言模型的训练过程，特别是PPO（近端策略优化）和DPO（直接偏好优化）等算法在对齐人类偏好方面的应用。探索更高效、更稳定的训练方法，以减少计算资源需求。</p>
+                <p>当前关注点：</p>
+                <ul>
+                    <li>DPO与PPO的性能对比与优化</li>
+                    <li>奖励模型的设计与训练</li>
+                    <li>减少强化学习训练中的不稳定性</li>
+                </ul>
+                <div class="research-tags">
+                    <span class="tag">PPO</span>
+                    <span class="tag">DPO</span>
+                    <span class="tag">奖励模型</span>
+                    <span class="tag">人类偏好对齐</span>
+                </div>
+            </div>
+
+            <div class="research-item">
+                <h3>基于LLM的多智能体系统</h3>
+                <p>探索如何构建基于大语言模型的多智能体系统，研究智能体之间的协作机制、通信协议以及集体决策过程。关注如何利用多智能体系统解决复杂问题，以及如何评估和提高系统的整体性能。</p>
+                <p>当前关注点：</p>
+                <ul>
+                    <li>智能体角色设计与专业化</li>
+                    <li>智能体间的有效沟通机制</li>
+                    <li>多智能体系统的评估框架</li>
+                    <li>复杂任务的分解与协作策略</li>
+                </ul>
+                <div class="research-tags">
+                    <span class="tag">多智能体</span>
+                    <span class="tag">协作机制</span>
+                    <span class="tag">角色专业化</span>
+                    <span class="tag">集体智能</span>
+                </div>
+            </div>
+
+            <div class="research-item">
+                <h3>AI在教育与社会科学领域的应用</h3>
+                <p>研究如何将人工智能技术，特别是大语言模型应用于教育和社会科学研究中。探索AI如何辅助教学、个性化学习、社会数据分析以及政策制定等方面的应用。</p>
+                <p>当前关注点：</p>
+                <ul>
+                    <li>AI辅助教学系统的设计与评估</li>
+                    <li>个性化学习路径的生成与优化</li>
+                    <li>社会科学数据的智能分析方法</li>
+                    <li>AI在政策制定中的伦理考量</li>
+                </ul>
+                <div class="research-tags">
+                    <span class="tag">教育科技</span>
+                    <span class="tag">个性化学习</span>
+                    <span class="tag">社会数据分析</span>
+                    <span class="tag">AI伦理</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2024 李浩. 保留所有权利.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-weixin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html> 
