@@ -1127,3 +1127,15 @@ section:nth-child(odd) {
   opacity: 1;
   visibility: visible;
 } 
+.project-card {
+  width: 48%; /* 调整宽度，略小于50%以留出间隔 */
+  display: inline-block; /* 使元素并排显示 */
+  margin: 1%; /* 添加一些间隔 */
+  vertical-align: top; /* 顶部对齐，避免因内容高度不同导致的错位 */
+}
+
+.project-image {
+  height: 200px; /* 设置图片高度，确保显示完整 */
+  background-size: cover; /* 保证图片覆盖整个容器 */
+  background-position: center; /* 保证图片居中显示 */
+}
