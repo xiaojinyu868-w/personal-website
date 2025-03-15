@@ -13,11 +13,25 @@ window.addEventListener('scroll', function() {
 // 移动端导航菜单
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
+const navOverlay = document.querySelector('.nav-overlay');
+const body = document.body;
 
 if (navToggle) {
   navToggle.addEventListener('click', function() {
     navToggle.classList.toggle('active');
     navMenu.classList.toggle('active');
+    navOverlay.classList.toggle('active');
+    body.classList.toggle('no-scroll');
+  });
+}
+
+// 点击遮罩层关闭菜单
+if (navOverlay) {
+  navOverlay.addEventListener('click', function() {
+    navToggle.classList.remove('active');
+    navMenu.classList.remove('active');
+    navOverlay.classList.remove('active');
+    body.classList.remove('no-scroll');
   });
 }
 
@@ -30,6 +44,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (navToggle && navToggle.classList.contains('active')) {
       navToggle.classList.remove('active');
       navMenu.classList.remove('active');
+      navOverlay.classList.remove('active');
+      body.classList.remove('no-scroll');
     }
 
     const targetId = this.getAttribute('href');
@@ -760,4 +776,13 @@ document.addEventListener('DOMContentLoaded', function() {
             note.style.transform = `rotate(${randomRotate}deg) translateX(${randomTranslateX}px) translateY(${randomTranslateY}px)`;
         });
     }
-}); 
+});
+
+// 移动端底部导航
+function updateMobileNav() {
+  // 已移除底部导航，此函数保留但不执行任何操作
+  return;
+}
+
+// 添加滚动事件监听器
+// 已移除底部导航相关的事件监听器 

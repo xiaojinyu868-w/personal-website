@@ -2,31 +2,41 @@
 @media screen and (max-width: 992px) {
   .nav-menu {
     position: fixed;
-    top: 70px;
-    left: -100%;
+    top: 0;
+    right: -100%;
     background-color: white;
-    width: 100%;
-    height: calc(100vh - 70px);
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
-    padding-top: 50px;
-    transition: var(--transition);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
+    padding: 70px 20px 30px;
+    transition: all 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    overflow-y: auto;
   }
 
   .nav-menu.active {
-    left: 0;
+    right: 0;
   }
 
   .nav-menu li {
-    margin: 15px 0;
+    margin: 0;
+    width: 100%;
+    border-bottom: 1px solid #f0f4f8;
+  }
+
+  .nav-menu li a {
+    padding: 12px 15px;
+    display: block;
+    width: 100%;
   }
 
   .nav-toggle {
     display: block;
+    z-index: 1000;
   }
 
   .nav-toggle.active span:nth-child(1) {
@@ -39,6 +49,22 @@
 
   .nav-toggle.active span:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* 添加遮罩层 */
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+  }
+
+  .nav-overlay.active {
+    display: block;
   }
 
   .hero h1 {
@@ -475,5 +501,17 @@
   .skill-description {
     padding: 8px;
     font-size: 0.8rem;
+  }
+}
+
+/* 移动端底部导航 */
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* 为底部导航腾出空间 */
+  body {
+    padding-bottom: 0;
   }
 } 
