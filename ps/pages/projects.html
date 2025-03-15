@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品展示 - 李浩个人主页</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* 美化的项目展示样式 */
+        .projects-section {
+            background: linear-gradient(135deg, #f9f9ff 0%, #f0f2ff 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .projects-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233490dc' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            transition: all 0.4s ease;
+            transform: translateY(0);
+            position: relative;
+            border: 1px solid rgba(230, 230, 250, 0.7);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: rgba(52, 144, 220, 0.3);
+        }
+        
+        .project-image {
+            height: 220px;
+            background-size: contain;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-color: #f8f9fc;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(230, 230, 250, 0.7);
+        }
+        
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-card:hover .project-image::before {
+            opacity: 1;
+        }
+        
+        .project-content {
+            padding: 30px;
+            position: relative;
+        }
+        
+        .project-content h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        .project-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(to right, #3490dc, #6574cd);
+            border-radius: 3px;
+        }
+        
+        .project-content p {
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .project-tag {
+            background: linear-gradient(135deg, rgba(52, 144, 220, 0.1) 0%, rgba(101, 116, 205, 0.1) 100%);
+            color: #3490dc;
+            padding: 7px 15px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(52, 144, 220, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .project-tag:hover {
+            background: linear-gradient(135deg, rgba(52, 144, 220, 0.15) 0%, rgba(101, 116, 205, 0.15) 100%);
+            transform: translateY(-2px);
+        }
+        
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .project-links a {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #3490dc;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background-color: rgba(52, 144, 220, 0.05);
+        }
+        
+        .project-links a:hover {
+            background-color: rgba(52, 144, 220, 0.1);
+            transform: translateY(-2px);
+            color: #2779bd;
+        }
+        
+        .project-links i {
+            font-size: 1.2rem;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, #3490dc 0%, #6574cd 100%);
+            color: white;
+            padding: 120px 0 70px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='white' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.8;
+            pointer-events: none;
+        }
+        
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .page-header p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .filter-btn {
+            background-color: white;
+            border: 1px solid rgba(230, 230, 250, 0.7);
+            padding: 10px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: #555;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+        }
+        
+        .filter-btn:hover {
+            background-color: rgba(52, 144, 220, 0.05);
+            border-color: rgba(52, 144, 220, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(52, 144, 220, 0.1);
+            color: #3490dc;
+        }
+        
+        .filter-btn.active {
+            background: linear-gradient(135deg, #3490dc 0%, #6574cd 100%);
+            color: white;
+            border-color: #3490dc;
+            box-shadow: 0 8px 15px rgba(52, 144, 220, 0.2);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 20px;
+            }
+            
+            .page-header {
+                padding: 100px 0 60px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .page-header p {
+                font-size: 1.1rem;
+                padding: 0 20px;
+            }
+            
+            .project-content {
+                padding: 25px 20px;
+            }
+            
+            .project-content h3 {
+                font-size: 1.4rem;
+            }
+            
+            .project-image {
+                height: 180px;
+            }
+        }
+        
+        @media screen and (max-width: 576px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 0 10px;
+            }
+            
+            .filter-buttons {
+                gap: 10px;
+                margin-bottom: 30px;
+            }
+            
+            .filter-btn {
+                padding: 8px 15px;
+                font-size: 0.85rem;
+            }
+            
+            .project-image {
+                height: 160px;
+            }
+        }
+    </style>
+    <!-- 添加模态框样式 -->
+    <style>
+        /* 图片模态框样式 */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .image-modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .modal-content {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+            border: 4px solid white;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            background-color: white;
+        }
+        
+        .image-modal.active .modal-content {
+            transform: scale(1);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: #3490dc;
+            transform: scale(1.2);
+        }
+        
+        /* 便利贴摘要模态框样式 */
+        .sticky-note-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            padding: 20px;
+        }
+        
+        .sticky-note-modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .sticky-note-content {
+            background-color: #fff57c;
+            padding: 30px;
+            border-radius: 3px;
+            max-width: 700px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: rotate(-1deg);
+            transition: transform 0.3s ease;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .sticky-note-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
+            pointer-events: none;
+            border-radius: inherit;
+        }
+        
+        .sticky-note-modal.active .sticky-note-content {
+            transform: rotate(-1deg) scale(1);
+        }
+        
+        .sticky-note-modal h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 700;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+            padding-bottom: 10px;
+            font-family: 'Kalam', cursive, 'Roboto', sans-serif;
+        }
+        
+        .sticky-note-modal p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .sticky-note-modal .keywords {
+            margin-top: 20px;
+            font-weight: 700;
+            color: #333;
+            font-style: italic;
+        }
+        
+        .sticky-pin {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 10px 10px, #ff5252, #c41c1c);
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .sticky-note-content {
+                padding: 20px;
+                width: 95%;
+            }
+            
+            .sticky-note-modal h3 {
+                font-size: 1.5rem;
+            }
+            
+            .sticky-note-modal p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">李浩</div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../index.html#about">关于我</a></li>
+                <li><a href="../index.html#education">教育经历</a></li>
+                <li><a href="../index.html#experience">项目经验</a></li>
+                <li><a href="../index.html#skills">技能证书</a></li>
+                <li class="active"><a href="projects.html">作品展示</a></li>
+                <li><a href="research.html">研究规划</a></li>
+                <li><a href="../index.html#contact">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="page-header">
+        <div class="container">
+            <h1>作品展示</h1>
+            <p>我的项目作品与技术实践，展示我在人工智能等领域的实际应用能力</p>
+        </div>
+    </header>
+
+    <!-- 项目展示内容 -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="ai">人工智能</button>
+                <button class="filter-btn" data-filter="data">数据分析</button>
+                <button class="filter-btn" data-filter="llm">大模型</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-category="llm">
+                    <div class="project-image" style="background-image: url('../assets/images/prompt-optimization.jpg')"></div>
+                    <div class="project-content">
+                        <h3>自监督提示词优化框架</h3>
+                        <p>设计并实现了提示词自优化框架，该框架能根据用户需求和初始提示自动利用大模型改进提示词，并结合人类反馈进行自我评估迭代。</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">LLM</span>
+                            <span class="project-tag">提示词工程</span>
+                            <span class="project-tag">自监督学习</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-tasks"></i> 项目演示</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai">
+                    <div class="project-image" style="background-image: url('../assets/images/ai-detector.jpg')"></div>
+                    <div class="project-content">
+                        <h3>创新性文本检测系统</h3>
+                        <p>开发了基于大模型的语言风格辨识框架，微调DeBERTa模型，设计数据增强手段，提出多维度预测方法，在AI-Human文本区分任务中取得优异表现。</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">DeBERTa</span>
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">数据增强</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="http://39.106.55.147/"><i class="fas fa-play-circle"></i> 项目演示</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="data">
+                    <div class="project-image" style="background-image: url('../assets/images/aigc-tourism.jpg')"></div>
+                    <div class="project-content">
+                        <h3>AIGC文旅产业用户需求分析</h3>
+                        <p>领导团队研究AIGC赋能文旅产业，设计用户问卷以洞察Z世代需求，构建技术认知、体验、隐私安全等五大指标体系，利用XGBoost算法预测用户行为。</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">XGBoost</span>
+                            <span class="project-tag">情感分析</span>
+                            <span class="project-tag">用户研究</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-file-alt"></i> 研究海报</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="llm">
+                    <div class="project-image" style="background-image: url('../assets/images/metacognition.jpg')"></div>
+                    <div class="project-content">
+                        <h3>大模型元认知表现评测</h3>
+                        <p>毕业设计项目，通过定义大模型解决任务过程中所需各项能力的维度评级，构建任务需求向量，基于随机森林等算法探索元认知能力在任务中的作用。</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">LLM评测</span>
+                            <span class="project-tag">随机森林</span>
+                            <span class="project-tag">元认知</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="research-summary-link"><i class="fas fa-graduation-cap"></i> 研究概述</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2024 李浩. 保留所有权利.</p>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 添加图片模态框 -->
+    <div class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- 添加便利贴摘要模态框 -->
+    <div class="sticky-note-modal">
+        <div class="sticky-note-content">
+            <div class="sticky-pin"></div>
+            <span class="close-modal">&times;</span>
+            <h3>大模型元认知表现评测</h3>
+            <p>大模型技术在复杂任务中的表现越来越多样化。因此对模型的能力进行全面的评估变得越来越重要。传统的任务评测方法主要有两个缺点：一. 反映的是整个评测集上所有任务的"平均"效应，损失了具体任务级别的可解释性。二. 传统的评测方法通常一次只关注单一维度，而忽略了多个维度之间的交互效应。</p>
+            <p>因此，本文提出一种基于多维任务特征与向量预测的方法，旨在构建一个任务级别可解释的模型评估体系。我们首先从公开数据集、专家构造和实际场景中收集任务样本，对其进行数据预处理和归类；接着，定义元认知、任务复杂性、语义信息等任务需求维度，并制定详细的等级划分标准，进而构造任务特征向量。</p>
+            <p>随后，设计自动打分机制，通过大模型生成能够反应任务特征的向量，并与人工评分进行对比验证以确保一致性。最后，基于构造的特征向量训练向量预测模型，实现对模型表现的定量预测。此方法能够在任务级别提供大模型的能力预测，在可解释性上优于现有的基线方法。</p>
+            <p class="keywords">关键词： 大模型评测；元认知；任务级别可解释性</p>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // 项目筛选功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            // 图片模态框功能
+            const imageModal = document.querySelector('.image-modal');
+            const modalImg = document.getElementById('modal-img');
+            const projectImages = document.querySelectorAll('.project-image');
+            const closeButtons = document.querySelectorAll('.close-modal');
+            
+            // 便利贴摘要模态框
+            const stickyNoteModal = document.querySelector('.sticky-note-modal');
+            const researchSummaryLink = document.querySelector('.research-summary-link');
+            
+            // 点击图片打开模态框
+            projectImages.forEach(image => {
+                image.style.cursor = 'pointer';
+                image.addEventListener('click', function() {
+                    // 获取背景图URL并设置到模态框图片中
+                    const bgImage = this.style.backgroundImage.match(/url\(["']?([^"']*)["']?\)/)[1];
+                    modalImg.src = bgImage;
+                    imageModal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // 防止滚动
+                });
+            });
+            
+            // 点击研究概述链接打开便利贴模态框
+            if (researchSummaryLink) {
+                researchSummaryLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    stickyNoteModal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // 防止滚动
+                });
+            }
+            
+            // 关闭模态框
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    imageModal.classList.remove('active');
+                    stickyNoteModal.classList.remove('active');
+                    document.body.style.overflow = ''; // 恢复滚动
+                });
+            });
+            
+            // 点击模态框背景关闭
+            window.addEventListener('click', function(e) {
+                if (e.target === imageModal) {
+                    imageModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                if (e.target === stickyNoteModal) {
+                    stickyNoteModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // ESC键关闭模态框
+            window.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    imageModal.classList.remove('active');
+                    stickyNoteModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // 优化的初始化动画
+            projectCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1)';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 + index * 80); // 错开动画时间，使动画更自然
+            });
+            
+            // 改进的筛选逻辑
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 更新活动按钮
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 获取筛选类别
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // 使用变量保存卡片引用，便于管理
+                    let visibleCards = [];
+                    let hiddenCards = [];
+                    
+                    // 分类卡片
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            visibleCards.push(card);
+                        } else {
+                            hiddenCards.push(card);
+                        }
+                    });
+                    
+                    // 先处理隐藏卡片
+                    hiddenCards.forEach(card => {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    });
+                    
+                    // 再处理显示卡片
+                    visibleCards.forEach((card, index) => {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50 + index * 50); // 错开动画时间
+                    });
+                });
+            });
+            
+            // 优化图片交互效果
+            projectCards.forEach(card => {
+                const image = card.querySelector('.project-image');
+                
+                card.addEventListener('mouseenter', function() {
+                    image.style.transform = 'scale(1.03)';
+                    image.style.transition = 'transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    image.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

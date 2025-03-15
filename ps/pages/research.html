@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究规划 - 李浩个人主页</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <style>
+        .research-section {
+            background: linear-gradient(135deg, #f9f9ff 0%, #f0f2ff 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .research-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233490dc' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+        
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 50px auto 0;
+        }
+        
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(to bottom, #3490dc 0%, #6574cd 100%);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+            box-shadow: 0 0 10px rgba(52, 144, 220, 0.3);
+        }
+        
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            width: calc(50% - 40px);
+            box-sizing: border-box;
+            margin-bottom: 50px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid #3490dc;
+            top: 22px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 0 4px rgba(52, 144, 220, 0.2);
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -52px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -52px;
+        }
+        
+        .timeline-content {
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(230, 230, 250, 0.7);
+            position: relative;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-color: rgba(52, 144, 220, 0.3);
+        }
+        
+        .timeline-content h3 {
+            margin-top: 0;
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        .timeline-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(to right, #3490dc, #6574cd);
+            border-radius: 3px;
+        }
+        
+        .timeline-content ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        
+        .timeline-content ul li {
+            margin-bottom: 15px;
+            padding-left: 26px;
+            position: relative;
+            line-height: 1.6;
+            color: #444;
+        }
+        
+        .timeline-content ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #3490dc;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        
+        .timeline-content ul li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-content p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        .timeline-content .highlight {
+            background: linear-gradient(to right, rgba(52, 144, 220, 0.1), rgba(101, 116, 205, 0.1));
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #3490dc;
+        }
+        
+        .timeline-content .highlight h4 {
+            margin-top: 0;
+            color: #3490dc;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content .highlight p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, #3490dc 0%, #6574cd 100%);
+            color: white;
+            padding: 120px 0 70px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='white' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.8;
+            pointer-events: none;
+        }
+        
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .page-header p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .introduction {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            margin-bottom: 50px;
+            border: 1px solid rgba(230, 230, 250, 0.7);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .introduction p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        .introduction p:last-child {
+            margin-bottom: 0;
+        }
+        
+        @media screen and (max-width: 900px) {
+            .timeline-container::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 20px;
+            }
+            
+            .timeline-item:nth-child(odd)::after {
+                right: auto;
+                left: 20px;
+            }
+            
+            .timeline-item:nth-child(even)::after {
+                left: 20px;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .page-header {
+                padding: 100px 0 60px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .page-header p {
+                font-size: 1.1rem;
+                padding: 0 20px;
+            }
+            
+            .timeline-content {
+                padding: 25px 20px;
+            }
+            
+            .timeline-content h3 {
+                font-size: 1.4rem;
+            }
+        }
+        
+        @media screen and (max-width: 576px) {
+            .timeline-item {
+                padding-left: 60px;
+                padding-right: 15px;
+            }
+            
+            .timeline-item::after {
+                left: 15px;
+            }
+            
+            .timeline-content {
+                padding: 20px 15px;
+            }
+            
+            .timeline-content h3 {
+                font-size: 1.3rem;
+            }
+            
+            .timeline-content ul li {
+                font-size: 0.95rem;
+            }
+            
+            .timeline-content .highlight {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">李浩</div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../index.html#about">关于我</a></li>
+                <li><a href="../index.html#education">教育经历</a></li>
+                <li><a href="../index.html#experience">项目经验</a></li>
+                <li><a href="../index.html#skills">技能证书</a></li>
+                <li><a href="projects.html">作品展示</a></li>
+                <li class="active"><a href="research.html">研究规划</a></li>
+                <li><a href="../index.html#contact">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="page-header">
+        <div class="container">
+            <h1>研究规划</h1>
+            <p>我的研究生阶段学习与科研计划</p>
+        </div>
+    </header>
+
+    <!-- 研究内容 -->
+    <section class="research-section">
+        <div class="container">
+            <div class="introduction">
+                <p>在本科统计学和人工智能相关课程的基础上，我对大模型训练与评测以及强化学习领域有着浓厚的兴趣。基于我目前的学术背景和技术能力，我制定了较为清晰的研究生阶段规划，希望能在这些领域深入学习并做出实质性贡献。</p>
+                <p>我的计划分为几个阶段，每个阶段都有明确的目标和执行路径，确保我能在研究生期间持续高效地发展相关能力，为未来可能的学术或工业界发展打下坚实基础。</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>入学前准备阶段</h3>
+                        <ul>
+                            <li>以毕业设计为契机，深入学习大模型后训练与评测技术，完成"基于多维任务特征向量评测推理模型的元认知表现差异"项目</li>
+                            <li>系统学习李宏毅教授的强化学习课程和配套的《EasyRL》教材，建构强化学习领域的基础框架</li>
+                            <li>持续追踪人工智能领域最新进展，关注DeepSeek、Manus等前沿模型研究</li>
+                            <li>联系潜在导师，沟通研究方向并规划预先需要掌握的知识</li>
+                </ul>
+                        <div class="highlight">
+                            <h4>当前进展</h4>
+                            <p>已经开始毕业设计相关工作，通过定义大模型解决任务过程中所需的各项能力维度评级，构建任务需求向量，探索元认知能力在任务中的作用。</p>
+                        </div>
+                    </div>
+            </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>研一阶段</h3>
+                        <ul>
+                            <li>认真学习专业必修课程，尤其是数学基础课程，将其发展为个人核心竞争力</li>
+                            <li>充分利用产品设计与开发课程，深入产业一线考察实践，发现"大模型+"行业落地痛点</li>
+                            <li>积极参与课题组科研项目，与导师和同门建立良好的学术交流关系</li>
+                            <li>跟进最新研究成果，建立日常阅读相关文献的习惯，争取在第二学期结束前完成毕业论文开题</li>
+                </ul>
+                        <div class="highlight">
+                            <h4>计划重点</h4>
+                            <p>将数学理论与人工智能应用结合，利用统计学背景优势，提升在强化学习、运筹学等数学密集型研究领域的竞争力。</p>
+                        </div>
+                    </div>
+            </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>研二阶段</h3>
+                        <ul>
+                            <li>深入学习研究方向内容，结合实际研究方向不断进行实验，推进毕业论文研究进度</li>
+                            <li>积极参加课题组的项目和各类学术论坛、学术会议，扩展学术视野和人脉</li>
+                            <li>完成专业实践部分的学分要求，将理论与实际应用相结合</li>
+                            <li>争取产出高质量的研究成果，尝试在领域内重要会议或期刊上投稿</li>
+                </ul>
+                        <div class="highlight">
+                            <h4>研究方向细化</h4>
+                            <p>计划在大模型评测与强化学习结合方向深耕，研究如何构建更科学的评测体系来指导模型训练与优化。</p>
+                        </div>
+                    </div>
+            </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>研三阶段</h3>
+                        <ul>
+                            <li>将重心放在毕业设计和学位论文写作上，整合前期研究成果</li>
+                            <li>完成高质量的学术研究，力争发表优秀学术论文</li>
+                            <li>根据个人兴趣和研究成果，考虑是否继续攻读博士学位或进入工业界</li>
+                            <li>提前了解就业市场需求，做好职业规划和准备</li>
+                </ul>
+                        <div class="highlight">
+                            <h4>长期目标</h4>
+                            <p>期待能在人工智能领域做出有价值的贡献，特别是在大模型训练与评测、强化学习及多智能体系统、人工智能+社会科学等方向。希望成为人工智能与多学科交叉的复合型人才，为AGI的发展贡献自己的力量。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2024 李浩. 保留所有权利.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-weixin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 添加滚动动画
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            function checkScroll() {
+                timelineItems.forEach(item => {
+                    const itemTop = item.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (itemTop < windowHeight * 0.8) {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // 初始化样式
+            timelineItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(50px)';
+                item.style.transition = 'all 0.6s ease';
+            });
+            
+            // 滚动监听
+            window.addEventListener('scroll', checkScroll);
+            
+            // 页面加载时检查一次
+            checkScroll();
+        });
+    </script>
+</body>
+</html> 

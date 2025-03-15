@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李浩 - 个人主页</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <meta name="description" content="李浩的个人主页 - 统计学、机器学习与大语言模型爱好者，探索AI创新应用">
+    <meta name="keywords" content="李浩, 统计学, 人工智能, 大语言模型, 机器学习, 深度学习, 北京师范大学">
+    <meta name="author" content="李浩">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_xxxx.css">
+    <meta property="og:title" content="李浩 - 统计学与人工智能爱好者">
+    <meta property="og:description" content="统计学、机器学习与大语言模型爱好者，探索AI原生应用">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <style>
+      .about-section {
+        background: linear-gradient(135deg, #f0f4ff 0%, #d6e4ff 100%) !important;
+        box-shadow: inset 0 0 20px rgba(66, 135, 245, 0.1) !important;
+      }
+        
+      @keyframes morphing {
+        0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+        50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+        75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+        100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+      }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">李浩</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="active"><a href="index.html">首页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#education">教育经历</a></li>
+                <li><a href="#experience">项目经验</a></li>
+                <li><a href="#skills">技能证书</a></li>
+                <li><a href="#research">研究计划</a></li>
+                <li><a href="pages/projects.html">作品展示</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 头部区域 -->
+    <header class="hero" id="home">
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="hero-content centered">
+                <div class="hero-text">
+                    <h1 class="glitch-effect" data-text="李浩">李浩</h1>
+                    <div class="typing-container">
+                        <h2 class="typing-text">统计学 · 人工智能 · 大语言模型</h2>
+                    </div>
+                    <p>技术理想主义者，热衷于大模型与人工智能技术</p>
+                    <div class="hero-buttons">
+                        <a href="#about" class="btn primary-btn">了解更多</a>
+                        <a href="#contact" class="btn secondary-btn">联系我</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 关于我部分 -->
+    <section id="about" class="about-section">
+        <div class="about-bg"></div>
+        <div class="container">
+            <div class="section-title">
+                <h2>关于我</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="about-container">
+                <div class="about-profile">
+                    <div class="profile-image">
+                        <div class="image-wrapper">
+                            <img src="profile.jpg" alt="李浩" />
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h3>李浩</h3>
+                        <p class="profile-title">统计学 & 人工智能</p>
+                        <p class="profile-description">我对大模型的后训练、大模型评测、强化学习、基于LLM的多智能体系统，以及AI在教育与社会科学领域的应用等方向感兴趣，我有着投身技术浪潮的热情，希望通过技术推动社会进步，打磨优秀的产品以实现人生价值。</p>
+                        <div class="profile-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>1181783314@qq.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>131-2351-1781</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>北京</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-cards">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>教育背景</h4>
+                        <p>北京师范大学 | 统计学学士 | 2021.09 - 2025.06（预计）</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>技术专长</h4>
+                        <p>统计学、机器学习、深度学习、大语言模型技术栈、Python</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>研究兴趣</h4>
+                        <p>大模型后训练、大模型评测、强化学习、多智能体系统、AI在教育与社会科学领域的应用等</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 教育经历 -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>教育经历</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>北京师范大学</h3>
+                        <h4>统计学学士 | 2021.09 – 2025.06（预计毕业）</h4>
+                        <ul>
+                            <li>核心课程：抽样技术与市场调查（93分），统计预测与决策（92分），深度学习（93分），线性模型（92分）</li>
+                            <li>所获荣誉：京师二等奖学金、竞赛一等奖学金、京师杯课外学术科技作品竞赛一等奖、中国移动优秀实习生</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目经验 -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>实习与项目经历</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>北京师范大学智慧学习研究院</h3>
+                        <h4>科研实习生 | 2025.02 – 至今</h4>
+                        <ul>
+                            <li>及时跟进deepseek R1的复现进展，探索推理模型在政策大模型中的应用</li>
+                            <li>尝试利用模型思考过程做有监督微调以提升模型在政策问答场景中的逻辑推理能力</li>
+                            <li>编写Python脚本，通过恰当的提示词产生批量质量达标的推理数据</li>
+                            <li>在项目中设计带任务选择门控机制的完整模型架构以优化模型资源分配</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>毕业设计：基于多维任务特征向量评测推理模型的元认知表现差异</h3>
+                        <h4>研究项目 | 2025.02 – 至今</h4>
+                        <ul>
+                            <li>通过定义大模型解决任务过程中所需的各项能力的维度评级，采用deepseek-v3模型对来自美国法学院入学考试(LSAT)的1009个问题自动打分，构建任务需求向量</li>
+                            <li>选择千问大模型的推理及非推理版本分别执行任务并评估任务表现</li>
+                            <li>基于随机森林，前馈神经网络等算法构建基于任务需求向量的表现预测模型</li>
+                            <li>重点探索元认知能力在任务中的作用，目前正进行相关实验</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>中国移动，北京</h3>
+                        <h4>大模型数据治理实习生 | 2023.12 – 2024.03</h4>
+                        <ul>
+                            <li>探索大语言模型（LLM）在数据治理中的应用，针对数据采集过程中的质量控制提出创新解决方案</li>
+                            <li>设计并实现了提示词自优化框架，该框架能根据用户需求和初始提示自动利用大模型改进提示词，并结合人类反馈进行自我评估迭代</li>
+                            <li>通过实现提示词工程半自动化，较传统手工改进方法节省约一半的时间成本</li>
+                            <li>在机器学习任务场景中设计了基于模型输出的信息反馈机制，优化了数据治理流程</li>
+                        </ul>
+                        <p><strong>实习成果：</strong>在实习考核中被评为"优秀实习生"，获得了校招绿通免试资格</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>正大杯市场调查与分析大赛</h3>
+                        <h4>团队队长 | 2023.12 – 2024.04</h4>
+                        <h5>国家级三等奖 / 北京市一等奖</h5>
+                        <ul>
+                            <li>领导团队研究AIGC赋能文旅产业，设计用户问卷以洞察Z世代需求，构建技术认知、体验、隐私安全等五大指标体系</li>
+                            <li>用PEST与扎根理论设计调研框架，利用情感分析方法绘制词云图、利用XGBoost算法预测用户行为，准确率达到86.23%</li>
+                            <li>提出新兴景点与传统景点的差异化策略，挖掘AIGC全周期潜力以提升行业价值</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>全国大学生统计建模大赛</h3>
+                        <h4>团队队长 | 2024.02 – 2024.05</h4>
+                        <h5>北京市二等奖</h5>
+                        <ul>
+                            <li>开发了一个基于大模型的语言风格辨识框架:通过爬取知乎问题与人类答案，调用API获得相应的大模型回答</li>
+                            <li>微调基于transformer架构的DeBERTa模型并使用Adam优化器进行优化，同时设计数据增强手段提升模型预测能力</li>
+                            <li>在项目中提出了多维度预测、特化模型辅助和Agent模型解释相整合的创新方法</li>
+                            <li>结合标题信息进行预测，在AI-Human文本区分任务中取得了优异表现(Accuracy=0.9612，F1=0.9548)</li>
+                            <li>模型在小样本训练后能在25倍大的数据集上泛化良好(AUC=0.8282)</li>
+                        </ul>
+                        <p><strong>开源贡献：</strong>自建WebUI应用，并开源Flight-QA数据集</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能证书 -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>技能与证书</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-container">
+                
+                
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>机器学习</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">常见回归与分类算法</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">树模型与集成学习</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SVM</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>深度学习及强化学习</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Transformer架构</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">常见深度学习算法</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 82%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">强化学习(PPO, DPO)</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 78%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>大模型技术栈</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">大模型后训练对齐</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">大模型评测技术</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">提示词工程</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 添加研究计划部分 -->
+    <section id="research" class="research-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>研究计划</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="research-container">
+                <div class="research-phase">
+                    <div class="phase-icon">
+                        <i class="fas fa-hourglass-start"></i>
+                    </div>
+                    <div class="phase-content">
+                        <h3>入学前准备阶段</h3>
+                        <ul>
+                            <li>以毕业设计为契机，更一步地学习包括大模型后训练，评测在内的技术，阅读相关领域的经典论文</li>
+                            <li>系统学习李宏毅教授的强化学习课程和配套的《EasyRL》教材，建构起强化学习领域的基础框架</li>
+                            <li>保持跟踪人工智能领域最新进展，培养对技术+产品的良好直觉</li>
+                            <li>与潜在导师进行沟通，规划细分研究方向和预先学习需要掌握的知识</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="research-phase">
+                    <div class="phase-icon">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <div class="phase-content">
+                        <h3>研一阶段</h3>
+                        <ul>
+                            <li>认真学习IID专业的数学和产品类必修课程，夯实理论基础</li>
+                            <li><strong>数学方面</strong>：通过相关课程巩固数学基础，将其发展为个人核心竞争力，为在强化学习、运筹学等数学密集型研究领域做准备</li>
+                            <li><strong>产品方面</strong>：充分利用《产品设计与开发》等课程机会，与志同道合的同学一起深入到工业界和教育领域一线考察实践，重点关注"大模型+"行业落地最后一公里的核心痛点</li>
+                            <li>积极参与课题组科研项目，与导师和同门多沟通，获取有益意见和建议，沉淀科研想法</li>
+                            <li>结合个人兴趣和导师方向，确定毕业论文研究方向，争取在第二学期结束前完成开题</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="research-phase">
+                    <div class="phase-icon">
+                        <i class="fas fa-hourglass-end"></i>
+                    </div>
+                    <div class="phase-content">
+                        <h3>研二阶段</h3>
+                        <ul>
+                            <li>以参与科研为主，不断深入学习研究方向的内容，力求在该方向达到专业水平</li>
+                            <li>结合实际研究方向不断进行实验，推进毕业论文的研究进度</li>
+                            <li>积极参加课题组的项目，参与各类学术论坛和学术会议</li>
+                            <li>争取产出高质量的研究成果，争取在领域内重要会议或期刊上投稿</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="research-phase">
+                    <div class="phase-icon">
+                        <i class="fas fa-flag-checkered"></i>
+                    </div>
+                    <div class="phase-content">
+                        <h3>研三阶段与长期目标</h3>
+                        <ul>
+                            <li>将重心放在毕业设计、学位论文写作上，力争完成高质量的学术研究</li>
+                            <li>根据个人兴趣和研究成果，考虑是否继续攻读博士学位</li>
+                            <li>长期目标是在人工智能领域做出有价值的贡献，特别是在大模型训练与评测、强化学习及多智能体系统等方向</li>
+                            <li>希望成为人工智能与多学科交叉的复合型人才，为推动AGI的发展贡献力量</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>联系我</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="contact-container">
+                <!-- 便利贴风格的个人陈述 -->
+                <div class="sticky-notes">
+                    <div class="sticky-note">
+                        <div class="sticky-content">
+                            <h3>关于我的一些话</h3>
+                            <p>我对大模型(LLM)的后训练、大模型评测、强化学习、基于LLM的多智能体系统，以及AI在教育与社会科学领域的应用等方向感兴趣，并对一切前沿的技术有好奇心和探索欲。</p>
+                            <p>我爱好运动，喜欢跑步，游泳，与同学关系融洽，在科研方面有极高的热情，期待能够做出很solid的工作！</p>
+                        </div>
+                        <div class="sticky-pin"></div>
+                    </div>
+                    
+                    <div class="sticky-note" style="transform: rotate(-2deg);">
+                        <div class="sticky-content">
+                            <h3>联系方式</h3>
+                            <div class="sticky-contact">
+                                <i class="fas fa-envelope"></i>
+                                <span>1181783314@qq.com</span>
+                            </div>
+                            <div class="sticky-contact">
+                                <i class="fas fa-phone"></i>
+                                <span>131-2351-1781</span>
+                            </div>
+                            <div class="sticky-contact">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>北京</span>
+                            </div>
+                        </div>
+                        <div class="sticky-pin"></div>
+                    </div>
+                </div>
+                
+                <!-- 研究方向智能分析系统 -->
+                <div class="research-analyzer">
+                    <h3>研究方向智能分析</h3>
+                    <div class="model-selector">
+                        <span>选择模型:</span>
+                        <select id="modelSelector">
+                            <option value="Qwen/QwQ-32B">Qwen/QwQ-32B</option>
+                            <option value="deepseek-ai/DeepSeek-R1">deepseek-ai/DeepSeek-R1</option>
+                            <option value="deepseek-ai/DeepSeek-V3">deepseek-ai/DeepSeek-V3</option>
+                        </select>
+                    </div>
+                    
+                    <div class="analyzer-tabs">
+                        <div class="tab active" data-tab="compatibility">研究兼容性</div>
+                        <div class="tab" data-tab="project">项目构思</div>
+                        <div class="tab" data-tab="feedback">反馈建议</div>
+                    </div>
+                    
+                    <div class="analyzer-content">
+                        <!-- 研究兼容性分析 -->
+                        <div class="tab-pane active" id="compatibilityTab">
+                            <div class="prompt-container">
+                                <textarea id="compatibilityPrompt" placeholder="描述你的研究兴趣和背景，AI将分析与我的研究方向的兼容性..."></textarea>
+                                <div class="prompt-footer">
+                                    <div class="word-count">0/500</div>
+                                    <button id="analyzeCompatibility" class="btn primary-btn">
+                                        <i class="fas fa-brain"></i> 分析兼容性
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="result-container" id="compatibilityResult">
+                                <div class="result-header">
+                                    <h4>研究兼容性分析</h4>
+                                    <div class="result-actions">
+                                        <button class="btn-icon copy-btn" data-result="compatibility" title="复制结果">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                        <button class="btn-icon save-btn" data-result="compatibility" title="保存结果">
+                                            <i class="fas fa-save"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="result-content">
+                                    <div class="typing-indicator">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="result-text"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 项目构思生成 -->
+                        <div class="tab-pane" id="projectTab">
+                            <div class="prompt-container">
+                                <textarea id="projectPrompt" placeholder="描述你感兴趣的研究领域，AI将生成可行的项目构思和合作方向..."></textarea>
+                                <div class="prompt-footer">
+                                    <div class="word-count">0/500</div>
+                                    <button id="generateProject" class="btn primary-btn">
+                                        <i class="fas fa-lightbulb"></i> 生成项目构思
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="result-container" id="projectResult">
+                                <div class="result-header">
+                                    <h4>项目构思</h4>
+                                    <div class="result-actions">
+                                        <button class="btn-icon copy-btn" data-result="project" title="复制结果">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                        <button class="btn-icon save-btn" data-result="project" title="保存结果">
+                                            <i class="fas fa-save"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="result-content">
+                                    <div class="typing-indicator">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="result-text"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 反馈建议 -->
+                        <div class="tab-pane" id="feedbackTab">
+                            <div class="prompt-container">
+                                <textarea id="feedbackPrompt" placeholder="描述你的研究方向和遇到的挑战，AI将提供专业反馈和建议..."></textarea>
+                                <div class="prompt-footer">
+                                    <div class="word-count">0/500</div>
+                                    <button id="provideFeedback" class="btn primary-btn">
+                                        <i class="fas fa-comment-dots"></i> 获取反馈
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="result-container" id="feedbackResult">
+                                <div class="result-header">
+                                    <h4>专业反馈</h4>
+                                    <div class="result-actions">
+                                        <button class="btn-icon copy-btn" data-result="feedback" title="复制结果">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                        <button class="btn-icon save-btn" data-result="feedback" title="保存结果">
+                                            <i class="fas fa-save"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="result-content">
+                                    <div class="typing-indicator">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="result-text"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="zhihu-contact">
+                        <h4>对分析结果感兴趣？欢迎在知乎联系我</h4>
+                        <p>如果您对我的研究方向感兴趣，或者想要进一步交流，欢迎通过知乎与我联系。</p>
+                        <a href="https://www.zhihu.com/people/clear-mind-58" target="_blank" class="zhihu-btn">
+                            <i class="fab fa-zhihu"></i> 在知乎上联系我
+                        </a>
+                     
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer-section" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2025 李浩 保留所有权利.</p>
+                </div>
+            
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/research-analyzer.js"></script>
+    
+    <!-- 添加滚动动画库 -->
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // 先显示所有AOS元素，防止它们保持隐藏状态
+        document.querySelectorAll('[data-aos]').forEach(element => {
+          element.removeAttribute('data-aos');
+        });
+        
+        // 然后正常初始化AOS
+        AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true,
+          mirror: false
+        });
+      });
+    </script>
+    <script>
+      // 调试"关于我"部分
+      window.addEventListener('load', function() {
+        const aboutSection = document.getElementById('about');
+        if(aboutSection) {
+          console.log('关于我部分存在，检查可见性状态:');
+          const style = window.getComputedStyle(aboutSection);
+          console.log('Display:', style.display);
+          console.log('Opacity:', style.opacity);
+          console.log('Visibility:', style.visibility);
+          console.log('位置信息:', aboutSection.getBoundingClientRect());
+          
+          // 强制显示
+          aboutSection.style.cssText = `
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            position: relative !important;
+            z-index: 999 !important;
+            background-color: #f8faff !important;
+          `;
+          
+          // 寻找所有子元素并强制显示
+          aboutSection.querySelectorAll('.about-card').forEach((card, index) => {
+            card.style.cssText = `
+              display: flex !important;
+              visibility: visible !important;
+              opacity: 1 !important;
+              position: relative !important;
+              z-index: ${1000 + index} !important;
+              background-color: white !important;
+              margin: 10px !important;
+              padding: 20px !important;
+              border: 2px solid #4287f5 !important;
+            `;
+          });
+        } else {
+          console.error('找不到关于我部分!');
+        }
+      });
+    </script>
+</body>
+</html> 
