@@ -786,3 +786,15 @@ function updateMobileNav() {
 
 // 添加滚动事件监听器
 // 已移除底部导航相关的事件监听器 
+
+// 检测是否在首页并添加class
+document.addEventListener('DOMContentLoaded', function() {
+  // 检查当前页面是否为首页
+  const isHomePage = window.location.pathname === '/' || 
+                     window.location.pathname === '/index.html' || 
+                     window.location.pathname.endsWith('/index.html');
+  
+  if (isHomePage) {
+    document.body.classList.add('is-home');
+  }
+}); 

@@ -2024,23 +2024,28 @@ section:nth-child(odd) {
 
 /* 作品集便利贴入口 */
 .portfolio-sticky-note {
-  position: fixed;
+  position: absolute;
   right: 30px;
   top: 120px;
-  width: 200px;
-  height: auto;
-  background: linear-gradient(135deg, #4287f5 0%, #6574cd 100%);
+  width: 180px;
   padding: 25px 20px;
+  background: linear-gradient(135deg, #4287f5 0%, #6574cd 100%);
+  border-radius: 12px;
   box-shadow: 0 10px 25px rgba(66, 135, 245, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
-  transform: rotate(2deg);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: 90;
+  transform: rotate(3deg);
   text-align: center;
+  z-index: 90;
   text-decoration: none;
   color: white;
-  border-radius: 12px;
+  transition: all 0.3s ease;
   backdrop-filter: blur(5px);
   overflow: hidden;
+  display: none; /* 默认不显示 */
+}
+
+/* 只在首页显示便利贴 */
+body.is-home .portfolio-sticky-note {
+  display: block;
 }
 
 .portfolio-sticky-note:before {
@@ -2088,6 +2093,24 @@ section:nth-child(odd) {
   font-weight: 600;
   color: white;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: inline-block;
+}
+
+.portfolio-sticky-note h3:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: width 0.3s ease;
+}
+
+.portfolio-sticky-note:hover h3:after {
+  width: 80%;
 }
 
 .portfolio-sticky-note i {
@@ -2095,6 +2118,7 @@ section:nth-child(odd) {
   color: white;
   margin-bottom: 10px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
 }
 
 .portfolio-sticky-note p {
@@ -2102,6 +2126,11 @@ section:nth-child(odd) {
   margin-bottom: 0;
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.portfolio-sticky-note:hover p {
+  color: white;
 }
 
 .portfolio-sticky-note .pin {
@@ -2117,13 +2146,25 @@ section:nth-child(odd) {
   z-index: 2;
 }
 
+.portfolio-sticky-note .pin:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: rgba(66, 135, 245, 0.8);
+  border-radius: 50%;
+}
+
 /* 移动端适配 */
 @media (max-width: 768px) {
   .portfolio-sticky-note {
-    position: fixed;
+    position: absolute;
     right: 15px;
     top: auto;
-    bottom: 20px;
+    bottom: 100px;
     width: 160px;
     padding: 20px 15px;
     z-index: 95;
@@ -2149,12 +2190,32 @@ section:nth-child(odd) {
   .portfolio-sticky-note p {
     font-size: 0.85rem;
   }
+  
+  .portfolio-sticky-note .pin {
+    width: 16px;
+    height: 16px;
+    top: -8px;
+  }
+  
+  .portfolio-sticky-note .pin:before {
+    width: 6px;
+    height: 6px;
+  }
 }
 
 @media (max-width: 480px) {
   .portfolio-sticky-note {
-    right: 10px;
     width: 140px;
     padding: 15px 12px;
+    bottom: 80px;
+    right: 10px;
+  }
+  
+  .portfolio-sticky-note h3 {
+    font-size: 1.1rem;
+  }
+  
+  .portfolio-sticky-note i {
+    font-size: 1.6rem;
   }
 }
